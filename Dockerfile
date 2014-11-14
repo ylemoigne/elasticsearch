@@ -15,6 +15,9 @@ RUN \
   rm -f elasticsearch-1.3.2.tar.gz && \
   mv /tmp/elasticsearch-1.3.2 /elasticsearch
 
+RUN /elasticsearch/bin/plugin -install transport-couchbase -url http://packages.couchbase.com.s3.amazonaws.com/releases/elastic-search-adapter/2.0.0/elasticsearch-transport-couchbase-2.0.0.zip
+RUN /elasticsearch/bin/plugin -install mobz/elasticsearch-head
+
 # Define mountable directories.
 VOLUME ["/data"]
 

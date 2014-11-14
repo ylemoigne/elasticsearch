@@ -3,3 +3,7 @@ path:
   logs: /data/log
   plugins: /data/plugins
   work: /data/work
+
+couchbase.password: password
+couchbase.username: Administrator
+couchbase.maxConcurrentRequests: 1024
